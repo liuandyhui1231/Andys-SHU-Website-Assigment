@@ -1,1 +1,77 @@
-/* WONDERFUL MOBILE FIRST CSS HERE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://via.placeholder.com/1920x400') no-repeat center center/cover;
+    height: 50vh;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav {
+    background: #007bff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+}
+
+.content {
+    padding: 2rem;
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        height: 30vh;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    .content h2 {
+        font-size: 1.2rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
