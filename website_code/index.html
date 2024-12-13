@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cantor College Homepage</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <link rel="stylesheet" href="css/mobile.css">
+    <script src="js/main.js"></script>
 </head>
 <body>
 
@@ -16,11 +16,16 @@
 </header>
 
 <nav>
-    <a href="#">Courses</a>
-    <a href="#">Learning Resources</a>
-    <a href="#">Staff</a>
-    <a href="#">Student</a>
-    <a href="#">Contact</a>
+    <button id="nav-toggle" aria-label="Toggle Navigation Menu">&#9776;</button>
+    <p id="mobile-nav-active">Menu</p> <!-- Menu button visible only in mobile view -->
+    <div id="nav-menu">
+        <a class="nav-active" href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">Learning Resources</a>
+        <a href="#">Staff</a>
+        <a href="#">Student</a>
+        <a href="#" class="contact-right">Contact</a>
+    </div>
 </nav>
 
 <div class="content">
@@ -31,7 +36,5 @@
 <footer>
     <p>&copy; Andy Liu (c3031650) - Cantor College 2024 &copy;</p>
 </footer>
-
-<script src="js/main.js"></script>
 </body>
 </html>
