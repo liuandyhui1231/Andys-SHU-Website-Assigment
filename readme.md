@@ -1,6 +1,7 @@
 # HTML / CSS / JS PROJECT
 
 ## YOUR NAME HERE
+Andy Liu
 
 ## GITHUB REPO ADDRESS
 
