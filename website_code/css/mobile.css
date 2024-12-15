@@ -2,62 +2,76 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding and border don't mess with sizing */
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+main {
+    flex: 1;
 }
 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 header {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url("../images/Bangkok_University.webp") no-repeat center center/cover;
-    height: 50vh;
+    background: url("../images/12226216184_b8d6e0073a_b.jpg") no-repeat center center/cover;
     color: #fff;
+    height: 100vh;
     text-align: center;
 }
 
+.Headline-1 {
+    font-size: 4.5vh;
+    font-weight: bold;
+    padding-bottom: 2vh;
+ }
+
 header h1 {
-    font-size: 64px;
-    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    font-size: 500%;
+    -webkit-text-stroke: 0.4vh rgb(0, 0, 0);
 }
 
-/* Navigation - Desktop */
+header p {
+    font-size: 200%;
+    -webkit-text-stroke: 0.15vh rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#sideheader {
+    height: 25vh;
+}
+
 nav {
-    display: flex;
-    align-items: center;
-    background-color: #333;
-    position: sticky;
     top: 0;
+    overflow: hidden;
+    position: sticky;
+    background-color: #333;
 }
 
 nav a {
     float: left;
-    color: white;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0.7% 1%;
     text-decoration: none;
-    padding: 14px 16px;
+    font-size: 2vh;
+}
+
+nav a:hover {
+    background-color: #43668f;
 }
 
 .nav-active {
     background-color: #1993da;
 }
 
-#mobile-nav-active {
-    display: none;
-}
-
-.contact-right {
+.contact-link {
     float: right;
 }
 
@@ -65,11 +79,27 @@ nav a {
     display: none;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f9;
+}
 
 .content {
-    padding: 32px;
+    padding: 5% 20%;
     text-align: center;
     flex: 1;
+}
+
+ul {
+    text-align: left;
+    padding-inline: 30%;
+}
+
+ul p {
+    font-size: 20px;
 }
 
 footer {
@@ -80,25 +110,40 @@ footer {
     margin-top: auto;
 }
 
+.style-button {
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #43668f;
+  }
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
 /* Mobile Styles */
 @media (max-width: 720px) {
-    /* Show the paragraph in mobile view */
-    #mobile-nav-active {
-        display: block;
-        font-size: 24px;
-        color: white;
-        background: #333;
-        cursor: pointer;
-        text-align: center;
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.2;
     }
 
-    /* Mobile-specific navigation layout */
+    header p {
+        font-size: 150%;
+    }
+
     nav {
         position: relative;
     }
 
     nav a {
-        display: none; /* Hide links for mobile initially */
+        display: none;
+        padding: 4% 7%;
     }
 
     #nav-toggle {
@@ -107,7 +152,7 @@ footer {
         color: white;
         border: none;
         font-size: 24px;
-        padding: 10px 20px;
+        padding: 10px 15px;
         cursor: pointer;
     }
 
@@ -117,10 +162,11 @@ footer {
         align-items: flex-start;
         position: fixed;
         top: 0;
-        left: -100%; /* Hide off-screen */
-        width: 70%;
+        left: -100%;
+        width: 60%;
         height: 100%;
         background: #333;
+        padding-top: 50%;
         color: white;
         z-index: 1000;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
@@ -128,13 +174,12 @@ footer {
     }
 
     #nav-menu a {
-        display: block; /* Ensure vertical stacking */
-        width: 100%;   /* Full width for better touch target */
+        display: block;
         color: white;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 150%;
+        width: 100%;
         text-align: left;
-        margin: 15px 0;
     }
 
     #nav-menu .contact-link {
@@ -143,10 +188,9 @@ footer {
     }
 
     #nav-menu.active {
-        left: 0; /* Slide-in effect from the left */
+        left: 0;
     }
 
-    /* Reset margin and padding for blurred elements */
     body.blurred .content,
     body.blurred footer,
     body.blurred header {
@@ -155,5 +199,30 @@ footer {
 
     body.blurred {
         overflow: hidden;
+    }
+
+    .content {
+        font-size: 1.5vh;
+    }
+
+    ul {
+        font-size: 1.5vh;
+    }
+
+    ul p {
+        font-size: 1.5vh;
+    }
+
+    footer {
+        font-size: 1.5vh;
+    }
+
+    table {
+        font-size: 1.2vh;  /* Adjust font size for mobile */
+    }
+
+    .style-button {
+        font-size: 1.5vh;
+        padding: 5px 16px;
     }
 }
