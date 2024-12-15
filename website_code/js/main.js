@@ -1,3 +1,4 @@
+// Creatomg a function to toggle the navigation menu
 document.addEventListener("DOMContentLoaded", () => {
     const navToggle = document.getElementById("nav-toggle");
     const navMenu = document.getElementById("nav-menu");
@@ -15,5 +16,16 @@ document.addEventListener("DOMContentLoaded", () => {
             navMenu.classList.remove("active");
             body.classList.remove("blurred");
         }
+    });
+});
+
+
+// Homepage Headline animation
+window.addEventListener('load', () => {
+    const headerElements = document.querySelectorAll('.header-animated');
+    headerElements.forEach((el, index) => {
+        setTimeout(() => {
+            el.classList.add('show');
+        }, index * 500);
     });
 });

@@ -2,16 +2,21 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding and border don't mess with sizing */
-}
-
-main {
-    flex: 1;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
 }
 
 header {
@@ -19,7 +24,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url("../images/12226216184_b8d6e0073a_b.jpg") no-repeat center center/cover;
+    background: url("../images/ezgif-5-bca6ebaa90.webp") no-repeat center center/cover;
     color: #fff;
     height: 100vh;
     text-align: center;
@@ -29,10 +34,11 @@ header {
     font-size: 4.5vh;
     font-weight: bold;
     padding-bottom: 2vh;
- }
+    padding-top: 2vh;
+}
 
 header h1 {
-    font-size: 500%;
+    font-size: 10vh;
     -webkit-text-stroke: 0.4vh rgb(0, 0, 0);
 }
 
@@ -44,6 +50,21 @@ header p {
 
 #sideheader {
     height: 25vh;
+}
+
+.header-animated {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.header-animated.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header-paragraph {
+    transition-delay: 0.5s;
 }
 
 nav {
@@ -71,7 +92,7 @@ nav a:hover {
     background-color: #1993da;
 }
 
-.contact-link {
+.contact-right {
     float: right;
 }
 
@@ -82,15 +103,69 @@ nav a:hover {
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #f4f4f9;
+    align-items: flex-start;
+    padding: 2%;
 }
 
 .content {
-    padding: 5% 20%;
-    text-align: center;
     flex: 1;
+    padding: 2% 15%;
+    text-align: center;
+}
+
+.container, .content {
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+
+.table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+.table-container table {
+    min-width: 100%;
+    border-collapse: collapse;
+}
+
+.contact-us-content {
+    flex: 0 1 20%;
+    margin-left: 2%;
+    margin-top: 4%;
+    padding: 10px;
+    background-color: rgb(63, 144, 219);
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.rounded-border {
+    border-radius: 20px;
+    border: 5px solid rgb(63, 145, 199);
+    margin: 3dvh 5vh;
+    max-height: 100%;
+    flex: 1;
+}
+
+.contact-us-content h1 {
+    font-size: 2vh;
+    margin: 1vh;
+}
+
+.contact-us-content p {
+    font-size: 1.5vh;
+    text-align: left;
+    margin: 1vh;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+img {
+    width: 70%;
+    height: auto;
+    padding: 2vh 0vh;
 }
 
 ul {
@@ -110,6 +185,10 @@ footer {
     margin-top: auto;
 }
 
+footer p {
+    margin: 0;
+}
+
 .style-button {
     border: none;
     color: white;
@@ -120,10 +199,6 @@ footer {
     font-size: 16px;
     cursor: pointer;
     background-color: #43668f;
-  }
-
-.table-wrapper {
-    overflow-x: auto;
 }
 
 /* Mobile Styles */
@@ -166,7 +241,6 @@ footer {
         width: 60%;
         height: 100%;
         background: #333;
-        padding-top: 50%;
         color: white;
         z-index: 1000;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
@@ -182,7 +256,7 @@ footer {
         text-align: left;
     }
 
-    #nav-menu .contact-link {
+    #nav-menu .contact-right {
         margin-top: auto;
         align-self: stretch;
     }
@@ -191,38 +265,23 @@ footer {
         left: 0;
     }
 
-    body.blurred .content,
-    body.blurred footer,
-    body.blurred header {
-        filter: blur(5px);
+    .container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    body.blurred {
-        overflow: hidden;
+    .contact-us-content {
+        width: 90%;
+        margin: 10px 0;
     }
 
     .content {
         font-size: 1.5vh;
+        padding: 5vh;
+        text-align: center;
     }
 
-    ul {
-        font-size: 1.5vh;
-    }
-
-    ul p {
-        font-size: 1.5vh;
-    }
-
-    footer {
-        font-size: 1.5vh;
-    }
-
-    table {
-        font-size: 1.2vh;  /* Adjust font size for mobile */
-    }
-
-    .style-button {
-        font-size: 1.5vh;
-        padding: 5px 16px;
+    .contact-us-content p {
+        font-size: 2vh;
     }
 }
