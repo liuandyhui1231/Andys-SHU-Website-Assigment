@@ -104,12 +104,11 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 2%;
+    padding: 2% 15%;
 }
 
 .content {
     flex: 1;
-    padding: 2% 15%;
     text-align: center;
 }
 
@@ -144,9 +143,17 @@ nav a:hover {
 .rounded-border {
     border-radius: 20px;
     border: 5px solid rgb(63, 145, 199);
-    margin: 3dvh 5vh;
     max-height: 100%;
     flex: 1;
+}
+
+.side-pannel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    margin: 5%;
 }
 
 .contact-us-content h1 {
@@ -268,17 +275,12 @@ footer p {
     .container {
         flex-direction: column;
         align-items: center;
+        font-size: 1.5vh;
     }
 
     .contact-us-content {
         width: 90%;
         margin: 10px 0;
-    }
-
-    .content {
-        font-size: 1.5vh;
-        padding: 5vh;
-        text-align: center;
     }
 
     .contact-us-content p {
