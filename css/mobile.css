@@ -96,13 +96,18 @@ nav a:hover {
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     padding: 2% 15%;
 }
 
 .content {
     flex: 1;
     text-align: center;
+}
+
+.container, .content {
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: stretch;
 }
 
 .table-container {
@@ -154,6 +159,10 @@ nav a:hover {
     margin: 1vh;
     word-wrap: break-word;
     overflow-wrap: break-word;
+}
+
+div h1 {
+    padding: 5vh 0vh;
 }
 
 img {
