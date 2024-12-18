@@ -6,7 +6,7 @@
     <title>Courses - Cantor College</title>
     <link rel="stylesheet" href="css/desktop.css">
     <link rel="stylesheet" href="css/mobile.css">
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js" defer></script> <!-- External JS -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <style>
         p {
@@ -32,6 +32,9 @@
         .status-full {
             color: red;
             font-weight: bold;
+            text-align: center;
+            display: block;
+            width: 100%;
         }
     </style>
 </head>
@@ -59,12 +62,13 @@
             <p>Cantor College has a range of courses in Computing and Art & Design</p>
             <img src="images/ezgif-5-9b32ab7e60.webp" alt="Student in the classroom with some teachers" style="width:100%;">
 
+            <!-- Computing Table -->
             <h1 id="course-title">Computing</h1>
             <div class="table-container">
-                <table>
+                <table id="computing-table">
                     <tr>
                         <th>Courses</th>
-                        <th>Courses type</th>
+                        <th>Courses Type</th>
                         <th>Course Summary</th>
                         <th>Course Awards Name</th>
                         <th>UCAS Code</th>
@@ -78,12 +82,13 @@
                 </table>
             </div>
 
+            <!-- Art & Design Table -->
             <h1 id="course-title">Art & Design</h1>
             <div class="table-container">
-                <table>
+                <table id="artDesign-table">
                     <tr>
                         <th>Courses</th>
-                        <th>Courses type</th>
+                        <th>Courses Type</th>
                         <th>Course Summary</th>
                         <th>Course Awards Name</th>
                         <th>UCAS Code</th>
@@ -96,6 +101,7 @@
                     </tr>
                 </table>
             </div>
+
         </div>
     </div>
 </main>    

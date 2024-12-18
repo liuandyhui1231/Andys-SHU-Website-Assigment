@@ -195,11 +195,11 @@ footer p {
 .style-button {
     border: none;
     color: white;
-    padding: 10px 32px;
+    padding: 1vh 2.5vh;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 2vh;
     cursor: pointer;
     background-color: #43668f;
 }
