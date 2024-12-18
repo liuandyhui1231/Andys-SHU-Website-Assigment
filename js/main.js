@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener("click", (event) => {
         if (!navMenu.contains(event.target) && event.target !== navToggle) {
             navMenu.classList.remove("active");
-            body.classList.remove("blurred");
             }
     });
     
