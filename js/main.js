@@ -1,4 +1,4 @@
-
+// JSON Fetch Program
 document.addEventListener('DOMContentLoaded', () => {
     fetch('data/course.json')
         .then(response => response.json())
